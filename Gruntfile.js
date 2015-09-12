@@ -6,17 +6,31 @@ module.exports = function(grunt) {
 		connect: {
 			app: {        
 				options:{ 
-					port: 8080,base: "app", 
-					keepalive: true,
-					debug: true
+					port: 8080,
+          base: "app"
 				}
-			}
-		},
+			},
+			bus: {        
+				options:{ 
+					port: 9080,
+          base: "app/bower_components/ozp-iwc/dist/"
+				}
+			}		},
     'gh-pages': {
     options: {
       base: 'app'
     },
     src: ['**']
+  },
+  watch: {
+    test: {
+        files: ['Gruntfile.js', 'app/**/*'],
+        tasks: ['copy'],
+        options: {
+            livereload: true,
+            spawn: false
+        }
+    }
   },
   copy: {
     mockapi: {
@@ -53,7 +67,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
 	
   // Default task(s).
-  grunt.registerTask('default', ['clean', 'copy', 'connect']);
+  grunt.registerTask('default', ['clean', 'copy', 'connect','watch']);
 
   grunt.registerTask('build', ['clean', 'copy']);
 

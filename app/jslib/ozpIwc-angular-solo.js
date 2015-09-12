@@ -1,7 +1,7 @@
 (function() {
 var iwcModule=angular.module('ozpIwc',[]);
 
-iwcModule.constant("ozpIwcConfig",{peerUrl:"../bower_components/ozp-iwc/dist"});
+iwcModule.constant("ozpIwcConfig",{peerUrl:"http://localhost:9080/"});
 
 iwcModule.factory("iwcClient",["ozpIwcConfig",function(config) {
     return client = new ozpIwc.Client(config);
@@ -50,29 +50,29 @@ iwcModule.directive("iwcModel",function() {
                'dst': api,
                'resource': resource,
                'action': 'get'
-           },function(response) {
-               if(response.response === "ok") {
-//                   iwcVersion++;
-                   
-                   self.$apply(function() {
-                       self[field]=response.entity;
-                   });
-               }
-           });           
+           }).then(function(response) {
+               self.$apply(function() {
+                  self[field]=response.entity;
+              });
+           }).catch(function(error) {
+             console.log("Unable to get "+api+"  "+resource,error);
+           });;           
            client.send({
                'dst': api,
                'resource': resource,
                'action': 'watch'
            },function(response) {
-               if(response.response === "changed") {
+//               if(response.response === "changed") {
 //                   iwcVersion++;
-                   
+                   console("ChangeNotice",response);
                    self.$apply(function() {
                        self[field]=response.entity.newValue;
                    });
-               }
-               return true;
-           });           
+//               }
+//               return true;
+           }).catch(function(error) {
+             console.log("Unable to watch "+api+"  "+resource,error);
+           });
        };  
     }]);
 })();  

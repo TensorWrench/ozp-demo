@@ -40,8 +40,9 @@
         <tab heading="Provided Resources">Note to self: share more</tab>
     </tabset>
 
-    <div iwc-model="workContext@data.api/workContext" class="container-fluid">
-        <context-resource ></context-resource>
+    <div  class="container-fluid">
+    <!--<pre>{{workContext|json}}</pre>-->
+    <context-resource ></context-resource>
         <context-resource ng-repeat="workContext in workContext.associatedResources"></context-resource>
     </div>
 

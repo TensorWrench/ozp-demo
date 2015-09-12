@@ -30,11 +30,23 @@ dawModule.directive('contextResource', function() {
       templateUrl: 'partials/contextResource.html',
       scope: true,
       controller: ['$scope','iwcClient',function(scope,client) {
-              console.log("In work context, scope is ",scope);
+       client.api("intents.api").list("/"+scope.workContext.contentType+"/view/").then(function(reply){
+          console.log("Reply to "+scope.workContext.contentType+"/view/ is ",reply.entity);
+          scope.$apply(function(){
+            scope.handlers=reply.entity;
+          });
+        });
       }]
     };
  });
  
 dawModule.controller('TileController', [
    '$scope',"iwcClient",function(scope,client) {
+      client.api("data.api").watch("/workContext",function(packet) {
+        var wc=packet.entity.newValue;
+        console.log("workContext changed",wc);
+        scope.$apply(function(){scope.workContext=wc;});
+      }).then(function(packet) {
+        scope.$apply(function(){scope.workContext=packet.entity;});
+      });
  }]);

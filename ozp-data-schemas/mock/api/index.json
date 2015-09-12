@@ -1,0 +1,26 @@
+{
+    "_links": {
+        "self": { "href" : "/api" },
+        "ozp:user-data": { "href":"/api/data/v1/exampleUser"},
+        "ozp:intent": { "href":"/api/intents/v1"},
+        "ozp:application": { "href":"/api/application/v1"},
+        "ozp:user": { "href":"/api/user/v1/exampleUser"},
+        "ozp:system": { "href":"/api/system/v1"}
+    },
+    "_embedded": {
+        "user": {
+            "name": "Jon Doe",
+            "userName": "jon.doe",
+            "_links" : {
+                "self": { "href":"/api/user/v1/exampleUser"}
+            }
+        },
+        "system": {
+            "version": "1.0",
+            "name": "IWC Demo site",
+            "_links" : {
+                "self": { "href":"/api/system/v1"}
+            }
+        }
+    }
+}
