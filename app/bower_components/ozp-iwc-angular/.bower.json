@@ -1,0 +1,43 @@
+{
+  "name": "ozp-iwc-angular",
+  "main": [
+    "dist/js/ozpIwc-bus-angular.js",
+    "dist/js/ozpIwc-bus-angular.min.js",
+    "dist/js/ozpIwc-client-angular.js",
+    "dist/js/ozpIwc-client-angular.min.js",
+    "dist/js/ozpIwc-metrics-angular.js",
+    "dist/js/ozpIwc-metrics-angular.min.js"
+  ],
+  "homepage": "https://github.com/ozone-development/ozp-iwc-angular",
+  "authors": [
+    "Ozone Developers"
+  ],
+  "description": "Angular wrappers for the OZONE IWC",
+  "keywords": [
+    "angular",
+    "iwc",
+    "ozone"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "ozp-iwc"
+  ],
+  "dependencies": {
+    "ozp-iwc": "ozone-development/ozp-iwc",
+    "ozp-data-schemas": "ozone-development/ozp-data-schemas"
+  },
+  "_release": "c16e92182f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c16e92182fb023b2a55cbddba7fe7c1cc8998318"
+  },
+  "_source": "git://github.com/ozone-development/ozp-iwc-angular.git",
+  "_target": "*",
+  "_originalSource": "ozone-development/ozp-iwc-angular"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "hal-browser",
+  "homepage": "https://github.com/ozone-development/hal-browser",
+  "_release": "3fed779c8e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3fed779c8e5f0285d4c00b4f61c020b5b721d408"
+  },
+  "_source": "git://github.com/ozone-development/hal-browser.git",
+  "_target": "*",
+  "_originalSource": "ozone-development/hal-browser"
+}

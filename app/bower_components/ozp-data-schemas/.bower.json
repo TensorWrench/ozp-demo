@@ -1,0 +1,27 @@
+{
+  "name": "ozp-data-schemas",
+  "main": [
+    "mock/api"
+  ],
+  "version": "0.0.2",
+  "homepage": "https://github.com/ozone-development/ozp-data-schemas",
+  "authors": [
+    "Ozone Developers"
+  ],
+  "description": "Mock data and standards for the OZP backend",
+  "license": "Apache-2.0",
+  "private": false,
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {},
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "495fb5f0a444a29a6a09b715822c7249a16b6a33"
+  },
+  "_source": "git://github.com/ozone-development/ozp-data-schemas.git",
+  "_target": "*",
+  "_originalSource": "ozone-development/ozp-data-schemas"
+}

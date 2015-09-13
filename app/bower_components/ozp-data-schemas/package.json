@@ -1,0 +1,12 @@
+{
+  "author": "Ozone Developers",
+  "name": "ozp-data-schemas",
+  "version": "0.0.1",
+  "repository": "https://github.com/ozone-development/ozp-data-schemas",
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-jsonlint": "*",
+    "grunt-tv4": "^0.4.1",
+    "load-grunt-tasks": "~0.6.0"
+  }
+}
