@@ -1,0 +1,39 @@
+{
+    "name" : "Web Violation Info",
+    "description" : "The IWC Debugger",
+    "type" : "application",
+    "state" : "active",
+    "uiHints": {
+        "width" : 400,
+        "height" : 400,
+        "singleton" : false
+    },
+    "tags": [
+        "demo"
+    ],
+    "intents": [ {
+        "action": "view",
+        "type": "application/filterViolations+json"
+    }
+    ],
+    "icons" : {
+        "small": "http://localhost:13000/tools/debugger/smallIcon.png",
+        "large": "http://localhost:13000/tools/debugger/largeIcon.png"
+    },
+    "screenShots" : [
+        {
+            "href" : "http://localhost:13000/tools/debugger/screenShot.png",
+            "title" : "A screenshot"
+        }
+    ],
+    "launchUrls" : {
+        "default": "http://localhost:8080/webViolationInfo/",
+        "test" : "http://test.localhost:15004/"
+    },
+    "_links": {
+        "self" : { "href": "/api/application/v1/webViolationInfo"},
+        "describes" : {"href":"http://localhost:8080/webViolationInfo/"},
+        "ozp:iwcSelf" : {"href": "web+ozp://system.api/application/webViolationInfo"}
+
+    }
+}
